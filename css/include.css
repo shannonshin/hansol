@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+/*헤더*/
+#header{
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    margin:30px 50px;
+    position:relative;
+}
+
+#header h1{
+    width:110px;
+    height:45px;
+    background:url(../images/sp_com.png) no-repeat -300px -5px;
+    text-indent:-9999px;
+    position:absolute;
+}
+#header h1 a{display:block;}
+
+.gnb{
+    display:inline-block;
+}
+/* .gnb li{
+    float:left;
+    padding:0 30px;
+}
+.gnb li::after{
+    content:"";
+    display:block;
+    margin:0 auto;
+    width:0;
+    height:2px;
+    background:#2d5b79;
+    transition:width 0.5s;
+}
+.gnb li:hover::after{
+    width:100%;
+} */
+.gnb>li{
+    float:left;
+    padding:0 30px;
+    position:relative;
+    height:75px;
+}
+.gnb>li::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:2px;
+    background:#2d5b79;
+    position:absolute;
+    left:0;
+    bottom:0;
+    transform:scale(0,1);
+    transition:transform 0.5s;
+}
+.gnb>li:hover::after{
+    transform:scale(1);
+}
+.gnb li a{
+    display:block;
+    height:100%;
+}
+
+.lnb{
+    position:absolute;
+    left:0;
+    top:76px;
+    z-index:1;
+    background:#fff;
+    width:100%;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s; /*호버 올라가는 속도*/
+}
+.gnb li:hover .lnb{
+    max-height:500px;
+    transition:max-height 2s; /*호버 내려오는 속도*/
+}
+.lnb li{}
+.lnb li:hover{
+    background-color:#2d5b79;
+}
+.lnb li:hover a{color:#fff;}
+.lnb li a{}
+
+.util{
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:13px;
+}
+.util li{
+    float:left;
+}
+.util li a:hover{color:#ddd;}
+.util li::after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:8px;
+    background-color:#333;
+    margin:0 5px;
+}
+.util li:last-child::after{display:none;}
+.util li a{}
+
+
+/*푸터*/
+#footer{
+    color:#fff;
+    font-size:13px;
+}
+
+/*푸터탑*/
+.fTop{
+    background:#383f43;
+    line-height:40px;
+    padding:10px 0;
+}
+
+.fMenu{float:left;}
+.fMenu li{
+    float:left;
+}
+.fMenu li::after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:8px;
+    background:#fff;
+    margin:0 5px;
+}
+.webFMenu li:last-child::after{display:none;}
+.fMenu li a{
+    color:#fff;
+}
+
+.csFamily{float:right;}
+.familyBox,.csBox{
+    float:left;
+    height:40px;
+    line-height:40px;
+    padding:0 15px;
+}
+.csBox{background:#2a3033;}
+.csBox span{
+    font-weight:bold;
+    vertical-align:text-bottom;
+}
+.csBox .num{
+    font-size:22px;
+    font-weight:normal;
+    padding-left:10px;
+}
+
+.familyBox{
+    color:#333;
+    background:#fff url(../images/arrow.png) no-repeat 95% center;
+    width:150px;
+    margin-left:10px;
+}
+
+/*푸터바텀*/
+.fBottom{
+    background:#4C5459;
+    text-align:center;
+    padding:80px 0;
+}
+
+.fLogo{
+    width:130px;
+    height:50px;
+    background:url(../images/sp_com.png) no-repeat -150px 0;
+    text-indent:-9999px;
+    margin:0 auto;
+}
+
+.fBottom p{margin-top:20px;}
+.fBottom p span::after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:8px;
+    background:#fff;
+    margin:0 5px;
+}
+
+.fBottom p span:last-child::after{display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+

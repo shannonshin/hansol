@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/*웹뷰*/
+.panel,.mCon03Search,.mMainCon04{display:none;}
+
+
+/*모바일뷰*/
+@media screen and (max-width:768px){   /*반응형 관련 내용은 여기 중괄호 안에 다 넣어야됨*/
+    /*웹공통*/
+    body{min-width:auto;}
+    .inner{width:auto;}
+    
+    /*모바일에서 보임*/
+    .panel,.mCon03Search,.mMainCon04{display:block;}
+    
+    /*모바일에서 안보임*/
+    .gnb,.util,.mainCon02,.mainCon03>div p,.con03Search,.mainCon04,.con05List li p,.fLogo,.fInfo{display:none;}
+    
+    /*헤더*/
+    #header{
+        height:auto;
+        margin:10px 20px;
+    }
+    #header h1{
+        width:70px;
+        height:28px;
+        background-size:400px;
+        background-position:0 0;
+        position:static;          /*앱솔루트로 띄웠던 거 다시 앉히기*/
+    }
+    .panel{
+        width:16px;
+        height:16px;
+        background:url(../images/sp_com.png) no-repeat -227px -98px;
+        background-size:400px;
+        text-indent:-9999px;
+        position:absolute;
+        right:0;
+        top:50%;
+        margin-top:-8px;
+    }
+    .panel a{
+        display:block;
+        height:100%;
+    }
+    
+    /*메인슬라이더*/
+    .mainSlider{
+        height:auto;
+        margin:0;
+    }
+    .mainTxt{
+        padding:45% 0;
+    }
+    .mainTxt h2{font-size:14px;}
+    .mainTxt p{font-size:11px;}
+    .sliderBtn{
+        width:13px;
+        height:23px;
+        background-size:400px;
+        background-position:-64px -30px;
+        margin-top:-11px;
+    }
+    .leftBtn{left:10px;}
+    .rightBtn{
+        background-position:-79px -30px;
+        right:10px;
+    }
+        
+    /*메인컨텐츠01*/
+    .mainCon01{padding:20px 0;}
+    .mainCon01 ul{
+        display:block;     /*전체영역에서 3등분하기 위해 인라인블락>블락으로 변경*/
+        overflow:hidden;   /*원래 인라인블락이어서 cf필요없었는데 블락으로 변경하는 바람에 cf필요해짐*/
+    }                      /*근데 cf를 넣을 수 없기 때문에 overflow:hidden을 넣어줌*/  
+    .mainCon01 li{
+        width:33.33%;
+        font-size:14px;
+        margin:0;
+        padding:10px 0;
+    }
+    .mainCon01 li span{
+        width:33px;
+        height:33px;
+        background-size:400px;
+        margin:0 auto;
+    }
+    .con01Icon01{background-position:-1px -57px;}
+    .con01Icon02{background-position:-37px -57px;}
+    .con01Icon03{background-position:-74px -55px;}
+    .con01Icon04{background-position:-109px -57px;}
+    .con01Icon05{background-position:-145px -57px;}
+    .con01Icon06{background-position:-181px -57px;}
+    .mainCon01 li span:hover{background-position-y:-92px;}
+    
+    /*메인컨텐츠03*/
+    .mainCon03{
+        padding:0 10px;        
+    }
+    .mainCon03>div{
+        width:calc(50% - 5px);  /*띄어쓰기 잊지말기*/
+        height:auto;
+        margin-right:10px;
+        margin-bottom:10px;
+        background-size:cover; /*가로값이 가변이기 때문에 세로가 짤리는 걸 방지하기 위해*/
+    }
+    .mainCon03>div:nth-child(2),.mainCon03>div:last-child{margin-right:0;}
+    .mainCon03>div h3{
+        padding:45% 0;   /*텍스트 세로 가운데 정렬*/
+        font-size:15px;
+    }
+    .mCon03Search{background:#f2f0ed;}
+    
+    /*메인컨텐츠04*/
+    .mMainCon04{}
+    .mMainCon04 dl{
+        height:45px;
+        line-height:45px;
+        background:#f2f0ed;
+        overflow:hidden;
+        margin:0 10px;
+        margin-bottom:10px;
+        font-size:13px;
+    }
+    .mMainCon04 dt{
+        float:left;
+        width:20%;
+        text-align:center;
+        color:#2d5b79;
+        font-weight:bold;
+    }
+    .mMainCon04 dd{
+        float:left;
+        width:75%;   /*오른쪽 여백을 주기위해 80%이 아닌 75%로 줌*/
+    }
+    .mMainCon04 dd a{
+        display:block;
+        width:100%;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+    
+    /*메인컨텐츠05*/
+    .mainCon05{
+        padding:20px 10px;
+        padding-bottom:10px;
+    }
+    .con05List li{
+        width:calc(50% - 5px);
+        height:auto;
+        margin-right:10px;
+        margin-bottom:10px;
+        background-size:100% 100%;
+    }
+    .con05List li:nth-child(2n){margin-right:0;}
+    .con05List li h3{
+        padding:70% 0 20% 0;
+        font-size:15px;
+    }
+    
+    /*푸터*/
+    .fMenu{
+        width:100%;
+        text-align:center;
+        line-height:normal;
+        margin:5px 0;
+    }
+    .fMenu li{
+        display:inline-block;
+        float:none;
+    }
+    .fMenu li:last-child::after{display:none;}
+    .csFamily{
+        width:100%;
+        text-align:center;
+        margin-top:10px;
+    }
+    .csBox,.familyBox{
+        float:none;
+        display:inline-block;
+    }
+    .csBox .num{font-size:13px;}
+    .csBox{
+        width:50%;
+        box-sizing:border-box;
+        vertical-align:top;
+    }
+    .familyBox{
+        width:30%;
+        margin-left:5px;
+        text-align:left;
+    }
+    .fBottom{padding:30px 0;}
+    .fBottom p{margin:0;}
+    
+    
+}
